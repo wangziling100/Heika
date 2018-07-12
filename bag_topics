@@ -1,0 +1,104 @@
+ 
+rosbag info studie_tag5_robot_2014-11-21-09-59-46_HEiKA006.bag 
+path:        studie_tag5_robot_2014-11-21-09-59-46_HEiKA006.bag
+version:     2.0
+duration:    46:16s (2776s)
+start:       Nov 21 2014 09:59:47.83 (1416560387.83)
+end:         Nov 21 2014 10:46:04.76 (1416563164.76)
+size:        36.1 GB
+messages:    11614895
+compression: none [46580/46580 chunks]
+types:       cob_msgs/DashboardState                      [db0cd0d535d75e0f6257b20c403e87f5]
+             cob_msgs/EmergencyStopState                  [d857d7312ffc16f75239036504e493e9]
+             cob_msgs/PowerBoardState                     [08899b671e6a1a449e7ce0000da8ae7b]
+             cob_msgs/PowerState                          [e6fa46a387cad0b7a80959a21587a6c9]
+             cob_phidgets/AnalogSensor                    [b52a946d34a1d251ef4461cdadfa70ae]
+             cob_phidgets/DigitalSensor                   [a7555c23666cea5795a76c1bdec02d2c]
+             control_msgs/JointTrajectoryControllerState  [10817c60c2486ef6b33e97dcd87f4474]
+             diagnostic_msgs/DiagnosticArray              [60810da900de1dd6ddd437c3503511da]
+             diagnostic_msgs/DiagnosticStatus             [d0ce08bc6e5ba34c7754f563a9cabaf1]
+             dynamic_reconfigure/Config                   [958f16a05573709014982821e6822580]
+             dynamic_reconfigure/ConfigDescription        [757ce9d44ba8ddd801bb30bc456f946f]
+             geometry_msgs/PolygonStamped                 [c6be8f7dc3bee7fe9e8d296070f53340]
+             geometry_msgs/PoseArray                      [916c28c5764443f268b296bb671b9d97]
+             geometry_msgs/PoseWithCovarianceStamped      [953b798c0f514ff060a53a3498ce6246]
+             geometry_msgs/Twist                          [9f195f881246fdfa2798d1d3eebca84a]
+             geometry_msgs/WrenchStamped                  [d78d3cb249ce23087ade7e7d0c40cfa7]
+             nav_msgs/MapMetaData                         [10cfc8a2818024d3248802c00c95f11b]
+             nav_msgs/OccupancyGrid                       [3381f2d731d4076ec5c71b0759edbe4e]
+             nav_msgs/Odometry                            [cd5e73d190d741a2f92e81eda573aca7]
+             rosgraph_msgs/Log                            [acffd30cd6b6de30f120938c17c593fb]
+             sensor_msgs/JointState                       [3066dcd76a6cfaef579bd0f34173e9fd]
+             sensor_msgs/Joy                              [5a9ea5f83505693b71e785041e67a8bb]
+             sensor_msgs/LaserScan                        [90c7ef2dc6895d81024acba2ac42f369]
+             std_msgs/Float64                             [fdb28210bfa9d7c91146260178d9a584]
+             std_msgs/String                              [992ce8a1687cec8c8bd883ec73ca41d1]
+             tf2_msgs/TFMessage                           [94810edda583a504dfda3829e70d7eec]
+             visualization_msgs/InteractiveMarker         [311bd5f6cd6a20820ac0ba84315f4e22]
+             visualization_msgs/InteractiveMarkerFeedback [ab0f1eee058667e28c19ff3ffc3f4b78]
+             visualization_msgs/InteractiveMarkerInit     [aa2f1dcea79533d1710675195653028d]
+             visualization_msgs/InteractiveMarkerUpdate   [83e22f99d3b31fde725e0a338200e036]
+             visualization_msgs/Marker                    [18326976df9d29249efc939e00342cde]
+topics:      /HEiKA/control/parameter_descriptions                                               1 msg     : dynamic_reconfigure/ConfigDescription       
+             /HEiKA/control/parameter_updates                                                   23 msgs    : dynamic_reconfigure/Config                  
+             /amcl/parameter_descriptions                                                        1 msg     : dynamic_reconfigure/ConfigDescription       
+             /amcl/parameter_updates                                                             1 msg     : dynamic_reconfigure/Config                  
+             /amcl_pose                                                                        822 msgs    : geometry_msgs/PoseWithCovarianceStamped     
+             /analog_sensors                                                                 83297 msgs    : cob_phidgets/AnalogSensor                   
+             /base_controller/command                                                       277082 msgs    : geometry_msgs/Twist                         
+             /base_controller/command_direct                                                 82958 msgs    : geometry_msgs/Twist                         
+             /base_controller/command_safe                                                  277723 msgs    : geometry_msgs/Twist                          (2 connections)
+             /base_controller/diagnostic                                                    277238 msgs    : diagnostic_msgs/DiagnosticStatus            
+             /base_controller/joint_command                                                 138821 msgs    : control_msgs/JointTrajectoryControllerState 
+             /base_controller/odometry                                                      277110 msgs    : nav_msgs/Odometry                           
+             /base_controller/state                                                         277583 msgs    : control_msgs/JointTrajectoryControllerState 
+             /collision_velocity_filter/parameter_descriptions                                   1 msg     : dynamic_reconfigure/ConfigDescription       
+             /collision_velocity_filter/parameter_updates                                        1 msg     : dynamic_reconfigure/Config                  
+             /collision_velocity_filter/relevant_obstacles_grid                             277082 msgs    : nav_msgs/OccupancyGrid                      
+             /collision_velocity_filter/velocity_limited_marker                              26250 msgs    : visualization_msgs/Marker                   
+             /dashboard_agg                                                                   2777 msgs    : cob_msgs/DashboardState                     
+             /diagnostics                                                                   418228 msgs    : diagnostic_msgs/DiagnosticArray              (4 connections)
+             /diagnostics_agg                                                                 2776 msgs    : diagnostic_msgs/DiagnosticArray             
+             /diagnostics_toplevel_state                                                      2776 msgs    : diagnostic_msgs/DiagnosticStatus            
+             /digital_sensors                                                               166616 msgs    : cob_phidgets/DigitalSensor                  
+             /emergency_stop_state                                                          277642 msgs    : cob_msgs/EmergencyStopState                 
+             /fts/force_filtered                                                           1773286 msgs    : geometry_msgs/WrenchStamped                 
+             /fts/force_values                                                             1780472 msgs    : geometry_msgs/WrenchStamped                 
+             /fts/force_values_transformed                                                 1779643 msgs    : geometry_msgs/WrenchStamped                 
+             /heika/disturbance_force                                                       498355 msgs    : geometry_msgs/WrenchStamped                 
+             /heika_display_path/arrows_updated                                                 42 msgs    : visualization_msgs/InteractiveMarker        
+             /heika_display_path/path_update_topic                                              15 msgs    : std_msgs/String                             
+             /heika_path/feedback                                                               15 msgs    : visualization_msgs/InteractiveMarkerFeedback
+             /heika_path/update                                                             322227 msgs    : visualization_msgs/InteractiveMarkerUpdate  
+             /heika_path/update_full                                                        183095 msgs    : visualization_msgs/InteractiveMarkerInit    
+             /heika_path_deviation/checkpoint_info_topic                                    166029 msgs    : std_msgs/String                             
+             /heika_path_deviation/checkpoint_topic                                         166043 msgs    : visualization_msgs/Marker                   
+             /heika_path_deviation/parameter_descriptions                                        2 msgs    : dynamic_reconfigure/ConfigDescription       
+             /heika_path_deviation/parameter_updates                                             2 msgs    : dynamic_reconfigure/Config                  
+             /joint_states                                                                  277559 msgs    : sensor_msgs/JointState                      
+             /joy                                                                               26 msgs    : sensor_msgs/Joy                             
+             /local_costmap_node/costmap/costmap                                              8831 msgs    : nav_msgs/OccupancyGrid                      
+             /local_costmap_node/costmap/inflation_layer/parameter_descriptions                  2 msgs    : dynamic_reconfigure/ConfigDescription       
+             /local_costmap_node/costmap/inflation_layer/parameter_updates                       2 msgs    : dynamic_reconfigure/Config                  
+             /local_costmap_node/costmap/obstacle_layer/parameter_descriptions                   2 msgs    : dynamic_reconfigure/ConfigDescription       
+             /local_costmap_node/costmap/obstacle_layer/parameter_updates                        2 msgs    : dynamic_reconfigure/Config                  
+             /local_costmap_node/costmap/obstacle_layer_footprint/footprint_stamped          13839 msgs    : geometry_msgs/PolygonStamped                
+             /local_costmap_node/costmap/obstacle_layer_footprint/parameter_descriptions         2 msgs    : dynamic_reconfigure/ConfigDescription       
+             /local_costmap_node/costmap/obstacle_layer_footprint/parameter_updates              2 msgs    : dynamic_reconfigure/Config                  
+             /local_costmap_node/costmap/parameter_descriptions                                  2 msgs    : dynamic_reconfigure/ConfigDescription       
+             /local_costmap_node/costmap/parameter_updates                                       2 msgs    : dynamic_reconfigure/Config                  
+             /map                                                                                1 msg     : nav_msgs/OccupancyGrid                      
+             /map_metadata                                                                       1 msg     : nav_msgs/MapMetaData                        
+             /particlecloud                                                                   1643 msgs    : geometry_msgs/PoseArray                     
+             /power_board/state                                                             277642 msgs    : cob_msgs/PowerBoardState                    
+             /power_board/voltage                                                           277642 msgs    : std_msgs/Float64                            
+             /power_state                                                                   277232 msgs    : cob_msgs/PowerState                         
+             /rosout                                                                          3488 msgs    : rosgraph_msgs/Log                            (32 connections)
+             /rosout_agg                                                                      3435 msgs    : rosgraph_msgs/Log                           
+             /scan_front                                                                     69113 msgs    : sensor_msgs/LaserScan                       
+             /scan_front_raw                                                                 69119 msgs    : sensor_msgs/LaserScan                       
+             /scan_rear                                                                      69120 msgs    : sensor_msgs/LaserScan                       
+             /scan_rear_raw                                                                  69107 msgs    : sensor_msgs/LaserScan                       
+             /scan_unified                                                                   68942 msgs    : sensor_msgs/LaserScan                       
+             /tf                                                                            592096 msgs    : tf2_msgs/TFMessage                           (3 connections)
+             /tf_static                                                                          8 msgs    : tf2_msgs/TFMessage                           (5 connections)
