@@ -1,0 +1,11 @@
+
+1. Ein paar .bag Dateien anschauen und die Studie Verstehen
+2. Daten sortieren
+   - bag Datein und cut files in einen Ordner
+3. Prüfen ob die Daten in cat ordner richtig zugeordnet sind
+4. Mit Daniel Azanov Position der Beine berechnen lassen und zum Datensätzen hinzufügen
+   - in separate Bag-Dateien berechnen: heika006_d3_e1_1_leg_position.bag
+   - in csv datei hinzufügen
+   - kann man in csv Datei Zeitstempel hinzufügen?
+5. Konfigulation des Roboters von den .bag Dateien extraktieren
+6. Alle oder großer Teil von Daten in eine .cvs Datei zusammenfassen
