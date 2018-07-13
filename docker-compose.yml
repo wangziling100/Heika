@@ -1,0 +1,29 @@
+version: '3.4'
+services:
+
+  heika:
+    image: jupyter/scipy-notebook
+    
+    container_name: heika
+    hostname: heika
+    ports:
+      - "8888:8888"
+    user: root
+    networks:
+      - rosdocker
+    volumes:
+      - "/tmp/.X11-unix:/tmp/.X11-unix"
+      - "./script/:/home/jovyan/Heika/script/:z"
+      - "./data/:/home/jovyan/Heika/data/:z"
+    environment:
+      - "DISPLAY=$DISPLAY"
+      - "QT_X11_NO_MITSHM=1"
+      - "NB_UID=1000"
+
+    command: start-notebook.sh
+
+  
+
+networks:
+  rosdocker: 
+    driver: bridge
