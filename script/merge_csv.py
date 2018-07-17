@@ -94,7 +94,9 @@ def merge_csv(dir, names=[], logger=None):
                             curr_df['exc_times'] = int(exc_times)
 
                             curr_df['time'] = curr_df.index
-                            assert len(curr_df.index)!=0, 'the dataframe is empty'
+                            if len(curr_df.index) == 0:
+                                logger.error('the dataframe is empty')
+                                continue
                             interval = 1.0*(e_time-s_time)/len(curr_df.index)
                             curr_df['time'] *= interval
                             curr_df['time'] += float(start_time)+s_time
