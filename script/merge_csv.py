@@ -118,7 +118,7 @@ def time_to_sec(time):
     return timedelta(minutes=int(mins), seconds=int(secs)).total_seconds()
 
 
-def main():
+def main(conf_files=None):
     logger_name = 'merge_csv'
     logger = logging.getLogger(logger_name)
     logger.setLevel(logging.INFO)
@@ -135,9 +135,9 @@ def main():
     fh.setFormatter(formatter)
     logger.addHandler(fh)
     print(logger_path)
-
-    names = ['tag 1']
-    return merge_csv('../data', names, logger)
+    if conf_files is None:
+        conf_files = ['tag 1']
+    return merge_csv('../data', conf_files, logger)
 
 
 if __name__ == '__main__':
