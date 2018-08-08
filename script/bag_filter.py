@@ -70,7 +70,7 @@ def bag_filter(dir, names=[], logger=None):
                         if is_part:
                             exc_txt += '_p'+part_num
 
-                        bag_fn = dir+week_txt+day_txt_dir+user_txt+day_txt+exc_txt+'.bag'
+                        bag_fn = dir+week_txt+day_txt_dir+"cut/"+user_txt+day_txt+exc_txt+'.bag'
                         if os.path.isfile(bag_fn):
                             logger.info(bag_fn)
 
@@ -99,7 +99,7 @@ def main(dir, conf_files=None):
     print(logger_path)
     if conf_files is None:
         conf_files = ['tag 1']
-    return bag_filter(dir, conf_files, logger)
+    bag_filter(dir, conf_files, logger)
 
 
 if __name__ == '__main__':
