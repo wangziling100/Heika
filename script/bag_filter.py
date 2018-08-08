@@ -2,7 +2,7 @@ import re
 import os
 import logging
 from os.path import splitext
-from nppath import basename
+from ntpath import basename
 import subprocess
 
 
