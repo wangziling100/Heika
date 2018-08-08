@@ -4,6 +4,7 @@ import logging
 from os.path import splitext
 from ntpath import basename
 import subprocess
+import pickle
 
 
 def bag_filter(dir, topics, target_dir, names=[], logger=None):
@@ -11,7 +12,10 @@ def bag_filter(dir, topics, target_dir, names=[], logger=None):
     exc_content = {}
     is_part = False
     b_get_bag = False
-    processed_bags = []
+    try:
+        pickle.load('../data/processed_bags.p')
+    except FileNotFoundError:
+        processed_bags = []
 
     for name in names:
         if dir[-1] != '/':
@@ -75,6 +79,9 @@ def bag_filter(dir, topics, target_dir, names=[], logger=None):
                             exc_txt += '_p'+part_num
 
                         bag_fn = dir+week_txt+day_txt_dir+"cut/"+user_txt+day_txt+exc_txt+'.bag'
+                        if bag_fn in processed_bags:
+                            continue
+
                         if os.path.isfile(bag_fn):
                             target_file = basename(bag_fn)
                             target_file = splitext(target_file)[0]+'_leg_position_source.bag'
@@ -88,12 +95,12 @@ def bag_filter(dir, topics, target_dir, names=[], logger=None):
                             for topic in topics:
                                 conditions = conditions + " topic==\'"+topic+"\' or"
                             conditions = conditions[:-3] + '"'
-                            print(conditions)
                             l_cmd.append(conditions)
                             subprocess.Popen(l_cmd)
 
                             logger.info(bag_fn)
-                            break
+                            processed_bags.append(bag_fn)
+                            pickle.dump(processed_bags, open('../data/processed_bags.p', 'w'))
 
                         else:
                             msg = "the file dosen't exit:"
