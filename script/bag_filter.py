@@ -85,7 +85,7 @@ def bag_filter(dir, topics, target_dir, names=[], logger=None):
                             l_cmd.append(target_file)
                             conditions = '"'
                             for topic in topics:
-                                conditions = conditions + " topic=='"+topic+"' or"
+                                conditions = conditions + " topic==\'"+topic+"\' or"
                             conditions = conditions[:-3] + '"'
                             print(conditions)
                             l_cmd.append(conditions)
