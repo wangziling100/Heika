@@ -81,6 +81,7 @@ def bag_filter(dir, topics, target_dir, names=[], logger=None):
                             target_file = target_dir+target_file
                             l_cmd = []
                             l_cmd.append('rosbag')
+                            l_cmd.append('filter')
                             l_cmd.append(bag_fn)
                             l_cmd.append(target_file)
                             conditions = '"'
@@ -89,7 +90,7 @@ def bag_filter(dir, topics, target_dir, names=[], logger=None):
                             conditions = conditions[:-3] + '"'
                             print(conditions)
                             l_cmd.append(conditions)
-                            subprocess.Popen(l_cmd, stdout=subprocess.PIPE)
+                            subprocess.Popen(l_cmd)
 
                             logger.info(bag_fn)
                             break
