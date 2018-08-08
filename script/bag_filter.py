@@ -13,7 +13,7 @@ def bag_filter(dir, topics, target_dir, names=[], logger=None):
     is_part = False
     b_get_bag = False
     try:
-        pickle.load(open('../data/processed_bags.p', 'r'))
+        pickle.load(open('../data/processed_bags.p', 'rb'))
     except FileNotFoundError:
         processed_bags = []
 
@@ -100,7 +100,7 @@ def bag_filter(dir, topics, target_dir, names=[], logger=None):
 
                             logger.info(bag_fn)
                             processed_bags.append(bag_fn)
-                            pickle.dump(processed_bags, open('../data/processed_bags.p', 'w'))
+                            pickle.dump(processed_bags, open('../data/processed_bags.p', 'wb'))
 
                         else:
                             msg = "the file dosen't exit:"
