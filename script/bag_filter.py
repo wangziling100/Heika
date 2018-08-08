@@ -83,7 +83,7 @@ def bag_filter(dir, topics, target_dir, names=[], logger=None):
                             l_cmd.append('rosbag')
                             l_cmd.append(bag_fn)
                             l_cmd.append(target_file)
-                            conditions = ""
+                            conditions = '"'
                             for topic in topics:
                                 conditions = conditions + " topic=='"+topic+"' or"
                             conditions = conditions[:-3] + '"'
