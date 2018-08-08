@@ -79,14 +79,17 @@ def bag_filter(dir, topics, target_dir, names=[], logger=None):
                             target_file = basename(bag_fn)
                             target_file = splitext(target_file)[0]+'_leg_position_source.bag'
                             target_file = target_dir+target_file
-                            cmd = 'rosbag filter '+bag_fn+' '+target_file
-                            cmd = cmd + ' '+'"'
+                            l_cmd = []
+                            l_cmd.append('rosbag')
+                            l_cmd.append(bag_fn)
+                            l_cmd.append(target_file)
+                            conditions = ""
                             for topic in topics:
-                                cmd = cmd + " topic=='"+topic+"' or"
-
-                            cmd = cmd[:-3] + '"'
-                            print(cmd)
-                            subprocess.Popen(cmd.split, stdout=subprocess.PIPE)
+                                conditions = conditions + " topic=='"+topic+"' or"
+                            conditions = conditions[:-3] + '"'
+                            print(conditions)
+                            l_cmd.append(conditions)
+                            subprocess.Popen(l_cmd, stdout=subprocess.PIPE)
 
                             logger.info(bag_fn)
                             break
