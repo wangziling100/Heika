@@ -97,7 +97,7 @@ def bag_filter(dir, topics, target_dir, names=[], logger=None):
                             logger.info(msg)
 
 
-def main(dir, conf_files=None):
+def main(dir, topics, target_dir, conf_files=None):
     logger_name = 'bag_filter'
     logger = logging.getLogger(logger_name)
     logger.setLevel(logging.INFO)
@@ -116,7 +116,7 @@ def main(dir, conf_files=None):
     print(logger_path)
     if conf_files is None:
         conf_files = ['tag 1']
-    bag_filter(dir, conf_files, logger)
+    bag_filter(dir, topics, target_dir, conf_files, logger)
 
 
 if __name__ == '__main__':
