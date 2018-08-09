@@ -96,7 +96,8 @@ def bag_filter(dir, topics, target_dir, names=[], logger=None):
                                 conditions = conditions + " topic==\'"+topic+"\' or"
                             conditions = conditions[:-3] + '"'
                             l_cmd.append(conditions)
-                            subprocess.Popen(l_cmd)
+                            process = subprocess.Popen(l_cmd)
+                            process.communicate()
 
                             logger.info(bag_fn)
                             processed_bags.append(bag_fn)
