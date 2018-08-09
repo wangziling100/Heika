@@ -85,7 +85,7 @@ def bag_filter(dir, topics, target_dir, names=[], logger=None):
                         if os.path.isfile(bag_fn):
                             target_file = basename(bag_fn)
                             target_file = splitext(target_file)[0]+'_leg_position_source.bag'
-                            target_file = target_dir+target_file
+                            target_file = target_dir+week+'/'+target_file
                             l_cmd = []
                             l_cmd.append('rosbag')
                             l_cmd.append('filter')
