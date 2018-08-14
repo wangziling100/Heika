@@ -12,6 +12,7 @@ def merge_csv(dir, names=[], logger=None):
     is_part = False
     b_get_csv = False
     df = pd.DataFrame()
+    miss_fn = []
 
     for name in names:
         if dir[-1] != '/':
@@ -96,6 +97,7 @@ def merge_csv(dir, names=[], logger=None):
                             curr_df['time'] = curr_df.index
                             if len(curr_df.index) == 0:
                                 logger.error('the dataframe is empty')
+                                miss_fn.append(csv_fn)
                                 continue
                             interval = 1.0*(e_time-s_time)/len(curr_df.index)
                             curr_df['time'] *= interval
@@ -104,11 +106,12 @@ def merge_csv(dir, names=[], logger=None):
                             
                             df = pd.concat([df, curr_df])
                         else:
-                            msg = "the file dosen't exit:"
+                            msg = "the file dosen't exist:"
                             msg += msg+csv_fn
                             logger.info(msg)
+                            miss_fn.append(csv_fn)
 
-    return df
+    return df, miss_fn
 
 
 def time_to_sec(time):
