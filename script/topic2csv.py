@@ -19,9 +19,9 @@ def calc(filename, start=0, end=-1.0, end2=-1.0, start2=-1.0):
 
 		#bagg = rosbag.Bag(filename+'g', 'w')
 
-		with open(filename[:-4]+".csv", 'w') as csv_file:
+		with open(filename[:-4]+".csv", 'wb') as csv_file:
 			csv_writer = csv.writer(csv_file)
-			csv_writer.writerow(['Force Input', 'Fx', 'Fy', 'Fz', 'Mx', 'My', 'Mz', 'Disturbance Force', 'Fx', 'Fy', 'Fz', 'Mx', 'My', 'Mz' , 'Velocity', 'Lx', 'Ly', 'Lz', 
+			csv_writer.writerow(['time','Force Input', 'Fx', 'Fy', 'Fz', 'Mx', 'My', 'Mz', 'Disturbance Force', 'Fx', 'Fy', 'Fz', 'Mx', 'My', 'Mz' , 'Velocity', 'Lx', 'Ly', 'Lz', 
 				'Ax', 'Ay', 'Az' , 'Distance', 'front', 'left', 'right'])
 
 			try:	
@@ -57,7 +57,7 @@ def calc(filename, start=0, end=-1.0, end2=-1.0, start2=-1.0):
 						dist_left = msg.data[msg.data.find('left')+5:msg.data.find('\n',msg.data.find('left'))]
 						dist_right = msg.data[msg.data.find('right')+6:]
 						
-						csv_writer.writerow(['', lFF.wrench.force.x, lFF.wrench.force.y, lFF.wrench.force.z, lFF.wrench.torque.x, lFF.wrench.torque.y, lFF.wrench.torque.z, '', 
+						csv_writer.writerow([t, '', lFF.wrench.force.x, lFF.wrench.force.y, lFF.wrench.force.z, lFF.wrench.torque.x, lFF.wrench.torque.y, lFF.wrench.torque.z, '', 
 						lDF.wrench.force.x, lDF.wrench.force.y, lDF.wrench.force.z, lDF.wrench.torque.x, lDF.wrench.torque.y, lDF.wrench.torque.z, '',
 						lCS.linear.x, lCS.linear.y, lCS.linear.z, lCS.angular.x, lCS.angular.y, lCS.angular.z, '', 
 						dist_front, dist_left, dist_right])
