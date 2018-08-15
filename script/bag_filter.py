@@ -13,7 +13,7 @@ def bag_filter(dir, topics, target_dir, names=[], logger=None):
     is_part = False
     b_get_bag = False
     try:
-        pickle.load(open('../data/processed_bags.p', 'rb'))
+        processed_bags = pickle.load(open('../data/processed_bags.p', 'rb'))
     except FileNotFoundError:
         processed_bags = []
 
