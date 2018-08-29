@@ -3,6 +3,7 @@ import pickle
 import os
 
 def topic_filter(dirs, topics, dest_dir):
+    miss = []
     for dir in dirs:
         filenames = os.listdir(dir)
         for filename in filenames:
@@ -21,7 +22,11 @@ def topic_filter(dirs, topics, dest_dir):
 
                 for topic, msg, tt in rosbag.Bag(source_path).read_messages(topics=topics):
                     new_bag.write(topic, msg, tt)
-
+                processed_bags.append(source_path)    
+                pickle.dump(processed_bags, open('../data/processed_bags.p', 'wb'))
+            except:
+                miss.append(source_path)
+                pickle.dump(miss, open('../data/miss_bags.p', 'wb'))
 
 if __name__ == '__main__':
     dirs = []
@@ -40,4 +45,4 @@ if __name__ == '__main__':
 
     topics = ['/tf', '/scan_rear', '/scan_rear_raw']
     for s,d in zip(dirs, dest_dirs):
-        topic_filter(s, topics=topics, d)
+        topic_filter(s, topics, d)
