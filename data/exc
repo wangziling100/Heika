@@ -1,0 +1,63 @@
+ 
+#####
+tag 1
+#####
+e1: Gerade vorwärts
+e2: Drehen in der Raummitte
+e3: Gerade vorwärts und rückwärts
+e4: Gerade worwärts, drehen, zurück
+e5: Vorwärts im Kreis, drehen, zurück
+e6: Gerade mit leichten Kräften und drehen
+e7: Gerade mit leichten Kräften, vorwärts - rückwärts
+
+#####
+tag 2
+#####
+e1: Wiederholung tag1, Gerade vorwärts und rückwärts                                d1_e3
+e2: Wiederholung tag1, Gerade worwärts, drehen, zurück                              d1_e4
+e3: Wiederholung tag1, Vorwärts im Kreis, drehen, zurück                            d1_e5
+e4: Wiederholung tag1, Gerade mit Kräften, vorwärts, einzeichnen                    ?d1_e7
+e5: Parcours ins Zimmer und zurück                                                  e8
+e6: Dreieck                                                                         e9
+e7: Seitwärts im Kreis                                                              e10
+e8: 1. Übung mit vertauschten Seiten                                                e11
+
+#####
+tag 3
+#####
+e1: Wiederholung tag2, Parcours ins Zimmer und zurück                               e8
+e2: Wiederholung tag2, Dreieck                                                      e9
+e3: Wiederholung tag2, Seitwärts im Kreis                                           e10
+e4: Wiederholung tag2, 1. Übung mit vertauschten Seiten                             e11    
+e5: Große Runde mit allen Türen                                                     e12
+e6: Kräfteparcours                                                                  e13    
+e7: Acht mit Hindernissen                                                           e14
+e8: 2. Übung mit vertauschten Seiten, entlang Linie                                 e15
+e8b: 2. Übung mit vertauschten Seiten, entlang Kreis                                e15    
+
+#####
+tag 4
+#####
+e1: Wiederholung tag3, Große Runde mit allen Türen                                  e12
+e2: Wiederholung tag3, Kräfteparcours                                               e13
+e3: Wiederholung tag3, Acht mit Hindernissen                                        e14
+e4: Wiederholung tag3, 2. Übung mit vertauschten Seiten                             e15
+e5: Rechts-lings-vertauscht, Gerade seitwärts                                       e16
+e6: Rechts-lings-vertauscht, Kreis seitwärts                                        e17
+e7: Rechts-lings-vertauscht, Dreieck seitwärts                                      e18
+e8: 360°-Drehung                                                                    e19
+
+#####
+tag 5
+#####
+e1: Wiederholung tag3, Große Runde mit allen Türen                                  e12                       
+e2: Wiederholung tag1, Gerade mit Kräften, vorwärts - rückwärts, einzeichnen        e7
+e3: Wiederholung tag2, Parcours ins Zimmer und zurück                               e8
+e4: Wiederholung tag2, Dreieck                                                      e9
+e5: Wiederholung tag2, Seitwärts im Kreis                                           e10
+e6: Wiederholung tag3, Kräfteparcours                                               e13
+e7: Wiederholung tag3, Acht mit Hindernissen                                        e14
+e8: Wiederholung tag4, Rechts-lings-vertauscht, Gerade seitwärts                    e16
+e9: Wiederholung tag4, Rechts-lings-vertauscht, Kreis seitwärts                     e17
+e10: Wiederholung tag4, Rechts-lings-vertauscht, Dreieck seitwärts                  e18
+e11: Wiederholung tag4, Kreis mit Kräften                                           e19
