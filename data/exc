@@ -3,20 +3,20 @@
 tag 1
 #####
 e1: Gerade vorwärts
-e2: Drehen in der Raummitte
-e3: Gerade vorwärts und rückwärts
-e4: Gerade worwärts, drehen, zurück
-e5: Vorwärts im Kreis, drehen, zurück
-e6: Gerade mit leichten Kräften und drehen
-e7: Gerade mit leichten Kräften, vorwärts - rückwärts
+e2: Drehen in der Raummitte							no records
+e3: Gerade vorwärts und rückwärts						e2
+e4: Gerade worwärts, drehen, zurück						e3
+e5: Vorwärts im Kreis, drehen, zurück						e4
+e6: Gerade mit leichten Kräften und drehen					e5
+e7: Gerade mit leichten Kräften, vorwärts - rückwärts				e6
 
 #####
 tag 2
 #####
-e1: Wiederholung tag1, Gerade vorwärts und rückwärts                                d1_e3
-e2: Wiederholung tag1, Gerade worwärts, drehen, zurück                              d1_e4
-e3: Wiederholung tag1, Vorwärts im Kreis, drehen, zurück                            d1_e5
-e4: Wiederholung tag1, Gerade mit Kräften, vorwärts, einzeichnen                    ?d1_e7
+e1: Wiederholung tag1, Gerade vorwärts und rückwärts                                e2
+e2: Wiederholung tag1, Gerade worwärts, drehen, zurück                              e3
+e3: Wiederholung tag1, Vorwärts im Kreis, drehen, zurück                            e4
+e4: Wiederholung tag1, Gerade mit Kräften, vorwärts, einzeichnen                    e6
 e5: Parcours ins Zimmer und zurück                                                  e8
 e6: Dreieck                                                                         e9
 e7: Seitwärts im Kreis                                                              e10
@@ -61,3 +61,26 @@ e8: Wiederholung tag4, Rechts-lings-vertauscht, Gerade seitwärts               
 e9: Wiederholung tag4, Rechts-lings-vertauscht, Kreis seitwärts                     e17
 e10: Wiederholung tag4, Rechts-lings-vertauscht, Dreieck seitwärts                  e18
 e11: Wiederholung tag4, Kreis mit Kräften                                           e19
+######
+all description
+######
+e1: line(no turning)
+e2: line
+e3: circle
+e4: line w/ forces(set 1)
+e5: line w/ forces(set 2)
+e6: line w/ forces(set 3)
+e7: line fwd & bwd w/ forces
+e8: 2-room course
+e9: triangle
+e10: circle sidewards
+e11: reversed training 
+e12: full course				c5
+e13: full course w/ forces			c5
+e14: 8-shaped around obstacles
+e15: line fwd & bwd reversed
+e16: line sidewards reversed
+e17: circle sidewards reversed
+e18: triangle sidewards reversed
+e19: 360° turning
+
