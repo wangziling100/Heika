@@ -9,3 +9,13 @@
    - kann man in csv Datei Zeitstempel hinzufügen?
 5. Konfigulation des Roboters von den .bag Dateien extraktieren
 6. Alle oder großer Teil von Daten in eine .cvs Datei zusammenfassen
+
+1.设置实时的评价方法，并对不同人的相同实验进行比较，相同人的不同实验进行比较
+2.设计实时报警系统，监控使用者状态
+3.改良模型
+
+1.先清理无效数据
+2.根据oliver计算score的方法，剔除outlier
+
+1.使不同练习可比较
+2.查看速度与评估的关系
